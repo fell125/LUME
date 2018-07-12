@@ -20,6 +20,7 @@ class PageController extends Controller
         $postsSecundario1= Post::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->take(1)->skip(1)->first();
         $postsSecundario2= Post::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->take(1)->skip(2)->first();
         $campeonatos= Campeonato::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->take(4)->get();
+        $posts = 1;
         return view('web.index', compact('postsSecundario1','postsSecundario2','campeonatos','postPrincipal'));
     }
 
