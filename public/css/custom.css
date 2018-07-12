@@ -1,0 +1,241 @@
+.navbar-custom{
+	background-color: #00347f;
+	border:none; 
+	margin:0; 
+	padding:0;
+	border-radius: 0;
+}
+
+.navbar-custom button{
+	background-color: white;
+	margin-left: 70%; 
+	margin-right: 50px; 
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.navbar-custom-black{
+	background-color: #212330;
+	border-radius: 0; 
+	border:none; 
+	margin-bottom: 20px;
+}
+
+.navbar-custom-black .navbar-brand{
+	padding-top: 8px;
+	font-size: 1.9rem;
+	color:white;
+}
+
+.ml-auto{
+	font-size: 1.9rem; 
+	margin-right: 13%;
+}
+
+.ml-auto .nav-item .nav-link{
+	color: white;
+}
+
+.ml-auto .nav-item .nav-link:hover{
+	color: white;
+}
+
+.dropdown-item{
+	font-size: 1.5rem;
+}
+
+.div-img-fundo{
+	 margin: -34px 0px -5px 0;
+	 height: 230px;
+	 background-repeat: no-repeat;
+	 background-size: 100%;
+	 background-position: center;
+}
+
+.mascara{
+	background-color: black;
+	opacity: 0.9;
+	height: 231px;
+}
+
+.h1-titulo{
+	color: white;
+	font-size: 34px;
+	padding-top: 100px; 
+	text-align: center;
+	font-weight: 600;
+	line-height: 1.1;
+	text-transform: uppercase;
+}
+
+.h1-titulo-noticia{
+	font-size: 34px;
+	padding: 10px 0 10px 0; 
+	text-align: justify;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.div-links{
+	padding: 40px 100px 11px;
+	margin: 0; 
+	font-family: 'Lato', sans-serif;
+}
+
+.div-links .col-md-3{
+	text-align: center;
+}
+
+.div-links .col-md-3 a{
+	color:white;
+}
+
+.div-links .col-md-3 a:hover{
+	text-decoration: none;
+}
+
+.dropdown-custom{
+	margin-top: -3px;
+}
+
+.dropdown-custom .dropdown-menu li a {
+	font-size: 1.5rem;
+	color: black;
+}
+
+.button-custom{
+	background-color: transparent; 
+	color: white; 
+	border-color: transparent;
+}
+
+.div-search{
+	padding: 50px 30px 0 30px; 
+	margin-top: 35px;
+}
+
+.div-search form{
+	width: 98%;
+}
+
+.div-search button{
+	border-color: rgba(0,0,0,.25);
+	height: 34px;
+}
+
+.div-corpo{
+	margin-top: 20px;
+}
+
+.div-campeonatos{
+	width: 100%; 
+	float: left;
+}
+
+.div-corpo .d-inline-block .panel-body{
+	font-size: 1.8rem; 
+	height: 300px;
+}
+
+
+.div-noticias{
+	width: 25%;
+	float: left;
+	height: 300px;
+}
+
+.div-noticias .panel-body{
+	font-size: 1.8rem; 
+	height: 300px;
+}
+
+.div-noticias .panel-body a{
+	text-decoration: none; 
+	color: black;
+}
+
+.div-noticias .panel-body a p {
+	font-size: 15px;
+}
+
+.div-img-noticia{
+	background-repeat: no-repeat; 
+	background-size: 140%;
+	background-position: center;  
+	height: 141px; 
+	overflow: hidden;
+}
+
+.div-img-campeonato{
+	background-repeat: no-repeat; 
+	background-size: 140%;
+	background-position: center;  
+	height: 300px; 
+	overflow: hidden;
+}
+
+.div-titulo-noticia{
+	margin-top: 10px;
+}
+
+.div-titulo-noticia a{
+	text-decoration: none;
+	color: black;
+	font-size: 16px;
+}
+
+.div-paginacao{
+	float:left;
+}
+
+.div-campeonato-nome{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.div-campeonato-nome a{
+	text-decoration: none;
+	color: black;
+	font-size: 25px;
+}
+
+.div-campeonatos a p{
+	text-decoration: none;
+	color: black;
+	font-size: 15px;
+}
+
+.informativo{
+	margin-top: 50px;
+	text-align: center;
+	font-size: 5vw;	
+}
+
+.panel-noticia{
+	margin-top: 50px;
+}
+.noticia-principal{
+	text-align: justify;
+}
+
+.noticia-principal .acessoria{
+	font-size: 85%;
+}
+
+.legenda-foto{
+	font-size: 0.875em;
+	font-style: italic;
+	text-align: center;
+	color: #9b9b9b;
+}
+
+.grow{
+	transition: all 1s ease;
+}
+
+.grow:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1	.1);
+}
