@@ -89,84 +89,165 @@
 			</div>
 		</div>
 		<h1>&nbsp;&nbsp;Notícias Recomendadas</h1>
-		@foreach($tagsrecomendados as $tagsrecomendados)
 
-		<div class="d-inline-block div-noticias">
-			
-			<div class="panel-body">
-				<a href="{{ route('post', $tagsrecomendados->slug) }}">
-					@if($tagsrecomendados->file)
-					<div class="div-img-noticia" style="background-image: url({{ $tagsrecomendados->file }});">					
+		<div class="col-md-12">
+			<div class="row">
+				@foreach($tagsrecomendados as $tagsrecomendados)
+
+				<div class="col-md-3 div-noticia-recomendada">
+						
+						<a href="{{ route('post', $tagsrecomendados->slug) }}">
+							@if($tagsrecomendados->file)
+							<div class="div-img-noticia" style="background-image: url({{ $tagsrecomendados->file }});">
+
+							</div>
+							@endif
+						</a>					
+
+						
+						<div class="div-titulo-noticia">
+							<a href="{{ route('post', $tagsrecomendados->slug) }}">
+								{{ $tagsrecomendados->name }}
+							</a>
+						</div>
+							<span class="post-footer" style="font-family: 'Montserrat', sans-serif;font-size: 12px; color: #4a4a4a;"> 
+											por Assessoria LUME - {{ $tagsrecomendados->created_at->format('d') }} de 
+											@if($tagsrecomendados->created_at->format('m') == '01')
+											janeiro
+											@elseif($tagsrecomendados->created_at->format('m') == '02')
+											fevereiro
+											@elseif($tagsrecomendados->created_at->format('m') == '03')
+											março
+											@elseif($tagsrecomendados->created_at->format('m') == '04')
+											abril
+											@elseif($tagsrecomendados->created_at->format('m') == '05')
+											maio
+											@elseif($tagsrecomendados->created_at->format('m') == '06')
+											junho
+											@elseif($tagsrecomendados->created_at->format('m') == '07')
+											julho
+											@elseif($tagsrecomendados->created_at->format('m') == '08')
+											agosto
+											@elseif($tagsrecomendados->created_at->format('m') == '09')
+											setembro
+											@elseif($tagsrecomendados->created_at->format('m') == '10')
+											outubro
+											@elseif($tagsrecomendados->created_at->format('m') == '11')
+											novembro
+											@elseif($tagsrecomendados->created_at->format('m') == '12')
+											dezembro
+											@endif
+										</span>
+					
 					</div>
-					@endif
-				</a>					
+
+				@endforeach()	
+
+				@foreach($categoriesrecomendados as $categoriesrecomendados)
+
+				<div class="col-md-3 div-noticia-recomendada">
+						
+						<a href="{{ route('post', $categoriesrecomendados->slug) }}">
+							@if($categoriesrecomendados->file)
+							<div class="div-img-noticia" style="background-image: url({{ $categoriesrecomendados->file }});">
+
+							</div>
+							@endif
+						</a>					
+
+						
+						<div class="div-titulo-noticia">
+							<a href="{{ route('post', $categoriesrecomendados->slug) }}">
+								{{ $categoriesrecomendados->name }}
+							</a>
+						</div>
+							<span class="post-footer" style="font-family: 'Montserrat', sans-serif;font-size: 12px; color: #4a4a4a;"> 
+											por Assessoria LUME - {{ $categoriesrecomendados->created_at->format('d') }} de 
+											@if($categoriesrecomendados->created_at->format('m') == '01')
+											janeiro
+											@elseif($categoriesrecomendados->created_at->format('m') == '02')
+											fevereiro
+											@elseif($categoriesrecomendados->created_at->format('m') == '03')
+											março
+											@elseif($categoriesrecomendados->created_at->format('m') == '04')
+											abril
+											@elseif($categoriesrecomendados->created_at->format('m') == '05')
+											maio
+											@elseif($categoriesrecomendados->created_at->format('m') == '06')
+											junho
+											@elseif($categoriesrecomendados->created_at->format('m') == '07')
+											julho
+											@elseif($categoriesrecomendados->created_at->format('m') == '08')
+											agosto
+											@elseif($categoriesrecomendados->created_at->format('m') == '09')
+											setembro
+											@elseif($categoriesrecomendados->created_at->format('m') == '10')
+											outubro
+											@elseif($categoriesrecomendados->created_at->format('m') == '11')
+											novembro
+											@elseif($categoriesrecomendados->created_at->format('m') == '12')
+											dezembro
+											@endif
+										</span>
+						
+					</div>
+
+				@endforeach()	
+
+				@foreach($postsrecomendados as $postsrecomendados)
 
 				
-				<div class="div-titulo-noticia">
-					<a href="{{ route('post', $tagsrecomendados->slug) }}">
-						{{ $tagsrecomendados->name }}
-					</a>
-				</div>
-				<a href="{{ route('post', $tagsrecomendados->slug) }}">
-					<p class="pull-right" id="data">{{ $tagsrecomendados->created_at->format('d/m') }}</p>
-				</a>
-			</div>
-		</div>
+				<div class="col-md-3 div-noticia-recomendada">
+						
+						<a href="{{ route('post', $postsrecomendados->slug) }}">
+							@if($postsrecomendados->file)
+							<div class="div-img-noticia" style="background-image: url({{ $postsrecomendados->file }});">
 
-		@endforeach()	
+							</div>
+							@endif
+						</a>					
 
-		@foreach($categoriesrecomendados as $categoriesrecomendados)
-
-		<div class="d-inline-block div-noticias">
-			
-			<div class="panel-body">
-				<a href="{{ route('post', $categoriesrecomendados->slug) }}">
-					@if($categoriesrecomendados->file)
-					<div class="div-img-noticia" style="background-image: url({{ $categoriesrecomendados->file }});">					
+						
+						<div class="div-titulo-noticia">
+							<a href="{{ route('post', $postsrecomendados->slug) }}">
+								{{ $postsrecomendados->name }}
+							</a>
+						</div>
+							<span class="post-footer" style="font-family: 'Montserrat', sans-serif;font-size: 12px; color: #4a4a4a;"> 
+											por Assessoria LUME - {{ $postsrecomendados->created_at->format('d') }} de 
+											@if($postsrecomendados->created_at->format('m') == '01')
+											janeiro
+											@elseif($postsrecomendados->created_at->format('m') == '02')
+											fevereiro
+											@elseif($postsrecomendados->created_at->format('m') == '03')
+											março
+											@elseif($postsrecomendados->created_at->format('m') == '04')
+											abril
+											@elseif($postsrecomendados->created_at->format('m') == '05')
+											maio
+											@elseif($postsrecomendados->created_at->format('m') == '06')
+											junho
+											@elseif($postsrecomendados->created_at->format('m') == '07')
+											julho
+											@elseif($postsrecomendados->created_at->format('m') == '08')
+											agosto
+											@elseif($postsrecomendados->created_at->format('m') == '09')
+											setembro
+											@elseif($postsrecomendados->created_at->format('m') == '10')
+											outubro
+											@elseif($postsrecomendados->created_at->format('m') == '11')
+											novembro
+											@elseif($postsrecomendados->created_at->format('m') == '12')
+											dezembro
+											@endif
+										</span>
+						
 					</div>
-					@endif
-				</a>					
-
 				
-				<div class="div-titulo-noticia">
-					<a href="{{ route('post', $categoriesrecomendados->slug) }}">
-						{{ $categoriesrecomendados->name }}
-					</a>
-				</div>
-				<a href="{{ route('post', $categoriesrecomendados->slug) }}">
-					<p class="pull-right" id="data">{{ $categoriesrecomendados->created_at->format('d/m') }}</p>
-				</a>
+
+				@endforeach()	
 			</div>
 		</div>
-
-		@endforeach()	
-
-		@foreach($postsrecomendados as $postsrecomendados)
-
-		<div class="d-inline-block div-noticias">
-			
-			<div class="panel-body">
-				<a href="{{ route('post', $postsrecomendados->slug) }}">
-					@if($postsrecomendados->file)
-					<div class="div-img-noticia" style="background-image: url({{ $postsrecomendados->file }});">					
-					</div>
-					@endif
-				</a>					
-
-				
-				<div class="div-titulo-noticia">
-					<a href="{{ route('post', $postsrecomendados->slug) }}">
-						{{ $postsrecomendados->name }}
-					</a>
-				</div>
-				<a href="{{ route('post', $postsrecomendados->slug) }}">
-					<p class="pull-right" id="data">{{ $postsrecomendados->created_at->format('d/m') }}</p>
-				</a>
-			</div>
-		</div>
-
-		@endforeach()	
-
 
 		<div class="fb-comments" data-href="https://www.lume.com.br/post/{{ $post->slug }}" data-numposts="5" data-width="100%"></div>
 </div>

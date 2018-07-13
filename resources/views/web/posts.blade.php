@@ -58,31 +58,58 @@
 			</form>
 		</div>
 
-		@foreach($posts as $post)
+		<div class="row">
+			@foreach($posts as $post)
 
-		<div class="d-inline-block div-noticias">
-			
-			<div class="panel-body">
-				<a href="{{ route('post', $post->slug) }}">
-					@if($post->file)
-					<div class="div-img-noticia" style="background-image: url({{ $post->file }});">					
+			<div class="col-md-3 div-noticia-recomendada">
+						
+						<a href="{{ route('post', $post->slug) }}">
+							@if($post->file)
+							<div class="div-img-noticia" style="background-image: url({{ $post->file }});">
+
+							</div>
+							@endif
+						</a>					
+
+						
+						<div class="div-titulo-noticia">
+							<a href="{{ route('post', $post->slug) }}">
+								{{ $post->name }}
+							</a>
+						</div>
+							<span class="post-footer" style="font-family: 'Montserrat', sans-serif;font-size: 12px; color: #4a4a4a;"> 
+								por Assessoria LUME - {{ $post->created_at->format('d') }} de 
+								@if($post->created_at->format('m') == '01')
+								janeiro
+								@elseif($post->created_at->format('m') == '02')
+								fevereiro
+								@elseif($post->created_at->format('m') == '03')
+								março
+								@elseif($post->created_at->format('m') == '04')
+								abril
+								@elseif($post->created_at->format('m') == '05')
+								maio
+								@elseif($post->created_at->format('m') == '06')
+								junho
+								@elseif($post->created_at->format('m') == '07')
+								julho
+								@elseif($post->created_at->format('m') == '08')
+								agosto
+								@elseif($post->created_at->format('m') == '09')
+								setembro
+								@elseif($post->created_at->format('m') == '10')
+								outubro
+								@elseif($post->created_at->format('m') == '11')
+								novembro
+								@elseif($post->created_at->format('m') == '12')
+								dezembro
+								@endif
+							</span>
+						
 					</div>
-					@endif
-				</a>					
 
-				
-				<div class="div-titulo-noticia">
-					<a href="{{ route('post', $post->slug) }}">
-						{{ $post->name }}
-					</a>
-				</div>
-				<a href="{{ route('post', $post->slug) }}">
-					<p class="pull-right" id="data">{{ $post->created_at->format('d/m') }}</p>
-				</a>
-			</div>
-		</div>
-
-		@endforeach()	
+			@endforeach()
+		</div>	
 		
 	</div> 
 	<div class="col-md-12 row div-paginacao">

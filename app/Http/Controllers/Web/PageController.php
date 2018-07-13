@@ -19,14 +19,23 @@ class PageController extends Controller
         $postPrincipal = Post::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->first();
         $postsSecundario1= Post::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->take(1)->skip(1)->first();
         $postsSecundario2= Post::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->take(1)->skip(2)->first();
+
+        $postDestaque1 = Post::orderby('id', 'DESC')-> where('status','PUBLISHED')->take(1)->skip(3)->first();
+        $postDestaque2 = Post::orderby('id', 'DESC')-> where('status','PUBLISHED')->take(1)->skip(4)->first();
+
+        $ultimasNoticias1 = Post::orderby('id', 'DESC')-> where('status','PUBLISHED')->take(1)->skip(5)->first();
+        $ultimasNoticias2 = Post::orderby('id', 'DESC')-> where('status','PUBLISHED')->take(1)->skip(6)->first();
+        $ultimasNoticias3 = Post::orderby('id', 'DESC')-> where('status','PUBLISHED')->take(1)->skip(7)->first();
+        $ultimasNoticias4 = Post::orderby('id', 'DESC')-> where('status','PUBLISHED')->take(1)->skip(8)->first();
+
         $campeonatos= Campeonato::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->take(4)->get();
-        $posts = 1;
-        return view('web.index', compact('postsSecundario1','postsSecundario2','campeonatos','postPrincipal'));
+
+        return view('web.index', compact('postsSecundario1','postsSecundario2','campeonatos','postPrincipal','postDestaque1','postDestaque2','ultimasNoticias1','ultimasNoticias2','ultimasNoticias3','ultimasNoticias4'));
     }
 
     public function noticias(){
 
-    	$posts= Post::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->paginate(24);
+    	$posts= Post::orderBy('id', 'DESC')-> where('status', 'PUBLISHED')->paginate(12);
         $categories= Category::where('name','!=','league of legends')->where('name','!=','dota 2')->where('name','!=','cs:go')->orderby('name','ASC')->get();
         $back = Post::where('status', 'PUBLISHED')->orderBy('id','DESC')->take(1)->orderBy('id','DESC')->get();
     	return view('web.posts', compact('posts','categories','back'));
@@ -42,7 +51,7 @@ class PageController extends Controller
     public function category($slug){
     	$category = Category::where('slug', $slug)->pluck('id')->first();
     	$posts    = Post::where('category_id', $category)
-    			  -> orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(24);
+    			  -> orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(12);
         $categories= Category::where('name','!=','league of legends')->where('name','!=','dota 2')->where('name','!=','cs:go')->orderby('name','ASC')->get();
         $back = Post::where('status', 'PUBLISHED')->orderBy('id','DESC')->take(1)->orderBy('id','DESC')->get();
         return view('web.posts', compact('posts','categories','back'));    
@@ -53,7 +62,7 @@ class PageController extends Controller
 
     		$query->where('slug', $slug);
 
-    	})-> orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(24);
+    	})-> orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(12);
 
         $categories= Category::where('name','!=','league of legends')->where('name','!=','dota 2')->where('name','!=','cs:go')->orderby('name','ASC')->get();
         $back = Post::where('status', 'PUBLISHED')->orderBy('id','DESC')->take(1)->orderBy('id','DESC')->get();
@@ -144,7 +153,7 @@ class PageController extends Controller
 
     public function pesquisar(){
 
-        $posts = Post::where('name','like','%'.Input::get('texto').'%')->where('status', 'PUBLISHED')->orWhere('body','like','%'.Input::get('texto').'%')->where('status', 'PUBLISHED')->orderBy('id','DESC')->paginate(24);
+        $posts = Post::where('name','like','%'.Input::get('texto').'%')->where('status', 'PUBLISHED')->orWhere('body','like','%'.Input::get('texto').'%')->where('status', 'PUBLISHED')->orderBy('id','DESC')->paginate(12);
         
         $categories= Category::where('name','!=','league of legends')->where('name','!=','dota 2')->where('name','!=','cs:go')->orderby('name','ASC')->get();
         $back = Post::where('status', 'PUBLISHED')->orderBy('id','DESC')->take(1)->orderBy('id','DESC')->get();
