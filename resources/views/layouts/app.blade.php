@@ -98,25 +98,21 @@
 			</div>
 		</nav>
         @endguest
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel navbar-custom-black">
-
+       
+        <nav style="background-color: #111111;top: 0;left: 0;width: 100%;height: 100px;padding-top: 22px;box-sizing: border-box;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}" style="color:white;">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-
-                <div class="" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                    <!-- AQUI VOU COLOCAR O ICONEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE-->
-                    <a class="nav-link" style="font-size: 1.5rem; margin-left: 5%;color:white;" href="{{ url('/noticias') }}">Noticias</a>  
-                    <a class="nav-link" style="font-size: 1.5rem; margin-left: 5%;color:white;" href="{{ url('/campeonatos') }}">Campeonatos</a>
-                    <a class="nav-link" style="font-size: 1.5rem; margin-left: 5%;color:white;" href="{{ url('/campeonatos') }}">Contato</a>
-                    </ul>   
-
-                </div>
+            <div class="col-md-12" style="padding:0;">
+            <div class="logo"><a href="{{ url('/') }}"> <img src="http://192.168.1.4/lume/public/image/lume.png" style="width: 158px;float: left;margin-bottom: 20px;margin-top: -18px;"> </a></div>
+            <ul style="list-style: none;float: right;margin: -10px 0; padding: 0; display: flex;">
+                <li style="list-style: none;"><a style="color: white;text-decoration: none;line-height: 80px;padding: 12px 10px;    text-transform: uppercase;font-size: 18px;" href="{{ url('/noticias') }}">Noticias</a></li>
+                <li style="list-style: none;"><a style="color: white;text-decoration: none;line-height: 80px;padding: 12px 10px;    text-transform: uppercase;font-size: 18px;" href="{{ url('/campeonatos') }}">Campeonatos</a></li>              
+                <li style="list-style: none;"><a style="color: white;text-decoration: none;line-height: 80px;padding: 12px 10px;    text-transform: uppercase;font-size: 18px;" href="{{ url('/noticias') }}">Contato</a></li>
+            </ul>
+            </div>
             </div>
         </nav>
+
+
 
         @if(session('info'))
             <div class="container">
@@ -150,6 +146,19 @@
             @yield('content')
         </main>
     </div>
+
+
+    <footer>
+        <div class="col-md-12" style="background-color: #111111;  height: 200px; margin-top: 50px;">
+            <div style="margin-top: 60px;">
+                <p style="color:white; font-size: 16px; text-align: center;">Liga Universitária Maranhense de e-Sports.</p>
+                <hr style="color: white; width: 100%; border-top: 1px solid;">
+                <p style="color:white; font-size: 16px; text-align: center;">©Copyright. Todos os direitos Reservados.</p>
+
+            </div>
+        </div>
+    </footer>
+
 
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('scripts')

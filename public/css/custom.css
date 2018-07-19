@@ -1,9 +1,46 @@
+.fadein{
+	animation: fadein 2s ease; /* Padrão */
+	-webkit-animation: fadein 2s ease; /* Webkit */
+	-moz-animation: fadein 2s ease; /* Firefox */
+	-ms-animation: fadein 2s ease; /* IE */
+}
+
+@keyframes fadein {
+from { opacity: 0.1; }
+to { opacity: 1; } /* Padrão */
+}
+@-moz-keyframes fadein {
+from { opacity: 0.5; }
+to { opacity: 1; } /* Firefox */
+}
+@-webkit-keyframes fadein {
+from { opacity: 0.5 }
+to { opacity: 1; } /* Webkit */
+}
+@-ms-keyframes fadein {
+from { opacity: 0.5; }
+to { opacity: 1; } /* IE */
+}​
+
 .navbar-custom{
 	background-color: #00347f;
 	border:none; 
 	margin:0; 
 	padding:0;
 	border-radius: 0;
+}
+
+.navbar-laravel{
+	background-color: #00347f;
+	margin-bottom: 0;
+}
+
+.logo{
+	width: 10%;
+}
+
+.logo img{
+	width: 100%;
 }
 
 .navbar-custom button{
@@ -15,7 +52,7 @@
 }
 
 .navbar-custom-black{
-	background-color: #212330;
+	background-color: #111111;
 	border-radius: 0; 
 	border:none; 
 	margin-bottom: 20px;
@@ -45,15 +82,15 @@
 }
 
 .div-img-fundo{
-	 margin: -34px 0px -5px 0;
+	 margin: -14px 0px -5px 0;
 	 height: 230px;
 	 background-repeat: no-repeat;
-	 background-size: 100%;
+	 background-size: cover;
 	 background-position: center;
 }
 
 .mascara{
-	background-color: rgba(0,0,0,.9);
+	background-color: rgba(0,0,0,.7);
 	height: 231px;
 }
 
@@ -160,7 +197,7 @@
 
 .div-img-noticia{
 	background-repeat: no-repeat; 
-	background-size: 140%;
+	background-size: cover;
 	background-position: center;  
 	height: 141px; 
 	overflow: hidden;
@@ -168,7 +205,7 @@
 
 .div-img-campeonato{
 	background-repeat: no-repeat; 
-	background-size: 140%;
+	background-size: cover;
 	background-position: center;  
 	height: 300px; 
 	overflow: hidden;
@@ -185,6 +222,7 @@
 }
 
 .div-paginacao{
+	margin-top: 30px;
 	float:left;
 }
 
@@ -231,7 +269,6 @@
 
 .principais{
 	margin: 0;
-	padding: 0;
 }
 
 .grow{
@@ -261,10 +298,6 @@
     transform: scale(0.9);
 }
 
-.destaques{
-	padding: 0;
-}
-
 .destaques h1{
 	text-align: center;
 	font-size: 25px;
@@ -287,7 +320,7 @@
 	height: 314px;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 150%;
+	background-size: cover;
 	
 }
 
@@ -303,10 +336,6 @@
 .noticia-destaque a{
 	text-decoration: none;
 
-}
-
-.ultimas-noticias{
-	padding: 0;
 }
 
 .ultimas-noticias h1{

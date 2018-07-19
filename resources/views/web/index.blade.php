@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="padding:0">
+<div class="container fadein" style="padding:0">
 		<div class="row col-md-12 principais">
 			
 			<div class="" style="width: 58%; display: inline-block; height: 405px; overflow: hidden;">
@@ -46,7 +46,7 @@
 					</a>
 			</div>
 				
-			<div class="col-md-5" style="padding-left: 5px;  overflow: hidden;">
+			<div class="col-md-5" style="padding-left: 5px;">
 					
 					
 						<div class="" style="display: inline-block; padding: 0; margin: 0; width: 104%;overflow: hidden;">
